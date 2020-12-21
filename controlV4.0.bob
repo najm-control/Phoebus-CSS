@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Control</name>
+  <width>1915</width>
+  <height>850</height>
+  <widget type="group" version="2.0.0">
+    <name>Interlocks</name>
+    <x>1360</x>
+    <y>90</y>
+    <width>294</width>
+    <height>155</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="51" green="77" blue="179">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="bool_button" version="2.0.0">
+      <name>interlocks_acknowledge</name>
+      <pv_name>plc:sw:ack</pv_name>
+      <x>127</x>
+      <y>16</y>
+      <height>34</height>
+      <labels_from_pv>true</labels_from_pv>
+      <tooltip>Press to acknowledge interlock</tooltip>
+      <show_confirm_dialog>false</show_confirm_dialog>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>interlocks_reset</name>
+      <pv_name>plc:sw:rst</pv_name>
+      <x>126</x>
+      <y>69</y>
+      <height>34</height>
+      <labels_from_pv>true</labels_from_pv>
+      <tooltip>Press to reset</tooltip>
+      <show_confirm_dialog>false</show_confirm_dialog>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>label_chiller_power_2</name>
+      <text>Ack</text>
+      <x>17</x>
+      <y>16</y>
+      <width>37</width>
+      <height>24</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="24.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>label_chiller_power_3</name>
+      <text>Reset</text>
+      <x>16</x>
+      <y>71</y>
+      <width>56</width>
+      <height>28</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="24.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Vacuum Limits</name>
+    <x>950</x>
+    <y>90</y>
+    <width>366</width>
+    <height>420</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="20.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="26" green="51" blue="153">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>RF Window</name>
+      <y>32</y>
+      <width>319</width>
+      <height>161</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="20.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="26" green="51" blue="153">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>rf_window_vacuum_upper</name>
+        <pv_name>plc:pressure:rfwindow:hihi:set</pv_name>
+        <x>137</x>
+        <y>14</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <format>2</format>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter lower lower limit of vacuum</tooltip>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>rf_window_vacuum_lower</name>
+        <pv_name>plc:pressure:rfwindow:hi:set</pv_name>
+        <x>137</x>
+        <y>59</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <format>2</format>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter lower limit of vacuum</tooltip>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_rf_window_vacuum_upper</name>
+        <text>LoLo</text>
+        <y>14</y>
+        <width>47</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_rf_window_vacuum_lower</name>
+        <text>Lo</text>
+        <y>59</y>
+        <width>24</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>e-Gun</name>
+      <y>212</y>
+      <width>319</width>
+      <height>164</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="20.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="26" green="51" blue="153">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>e-gun_vacuum_upper</name>
+        <pv_name>plc:pressure:egun:hihi:set</pv_name>
+        <x>137</x>
+        <y>14</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <format>2</format>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter lower lower limit of vacuum</tooltip>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>e-gun_vacuum_lower</name>
+        <pv_name>plc:pressure:egun:hi:set</pv_name>
+        <x>137</x>
+        <y>66</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <format>2</format>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter lower limit of vacuum</tooltip>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_e-gun_vacuum_upper</name>
+        <text>LoLo</text>
+        <y>14</y>
+        <width>47</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_e-gun_vacuum_lower</name>
+        <text>Lo</text>
+        <y>66</y>
+        <width>24</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Shielding Door</name>
+    <x>1360</x>
+    <y>510</y>
+    <width>294</width>
+    <height>220</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="26" green="51" blue="153">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>label_door_close</name>
+      <text>Close</text>
+      <x>17</x>
+      <y>72</y>
+      <width>54</width>
+      <height>28</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="24.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>label_door_open</name>
+      <text>Open</text>
+      <x>17</x>
+      <y>17</y>
+      <width>55</width>
+      <height>28</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="24.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>label_door_stop</name>
+      <text>Stop</text>
+      <x>17</x>
+      <y>127</y>
+      <width>46</width>
+      <height>28</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="24.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>button_door_stop</name>
+      <pv_name>mps:door:stop:set</pv_name>
+      <x>127</x>
+      <y>127</y>
+      <height>34</height>
+      <labels_from_pv>true</labels_from_pv>
+      <tooltip>Press to stop the door</tooltip>
+      <show_confirm_dialog>false</show_confirm_dialog>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>button_door_close</name>
+      <pv_name>mps:door:close:set</pv_name>
+      <x>127</x>
+      <y>72</y>
+      <height>34</height>
+      <labels_from_pv>true</labels_from_pv>
+      <tooltip>Press to close the door</tooltip>
+      <show_confirm_dialog>false</show_confirm_dialog>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>button_door_open</name>
+      <pv_name>mps:door:open:set</pv_name>
+      <x>128</x>
+      <y>17</y>
+      <height>34</height>
+      <labels_from_pv>true</labels_from_pv>
+      <tooltip>Press to open the door</tooltip>
+      <show_confirm_dialog>false</show_confirm_dialog>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>e-Gun</name>
+    <x>90</x>
+    <y>655</y>
+    <width>460</width>
+    <height>183</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="26" green="51" blue="153">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Filament Power Supply</name>
+      <x>17</x>
+      <y>5</y>
+      <width>390</width>
+      <height>144</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="18.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="26" green="51" blue="153">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="textentry" version="3.0.0">
+        <name>e-gun_filament_voltage</name>
+        <x>198</x>
+        <y>17</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <format>2</format>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter e-Gun filament voltage</tooltip>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>e-gun_filament_current</name>
+        <x>198</x>
+        <y>62</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <format>2</format>
+        <tooltip>Enter e-Gun filament current</tooltip>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_e-gun_filament_current</name>
+        <text>Current</text>
+        <x>37</x>
+        <y>62</y>
+        <width>76</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_e-gun_filament_voltage</name>
+        <text>Voltage</text>
+        <x>37</x>
+        <y>17</y>
+        <width>77</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>RF</name>
+    <x>90</x>
+    <y>90</y>
+    <width>460</width>
+    <height>578</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="20.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="26" green="51" blue="153">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Pulse</name>
+      <y>200</y>
+      <width>404</width>
+      <height>330</height>
+      <font>
+        <font family="Calibri" style="REGULAR" size="20.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="26" green="51" blue="153">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>label_pulse_width</name>
+        <text>Width</text>
+        <x>32</x>
+        <y>174</y>
+        <width>62</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_rep_rate</name>
+        <text>PRF</text>
+        <x>32</x>
+        <y>236</y>
+        <width>38</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_rf_frequency</name>
+        <text>Frequency</text>
+        <x>32</x>
+        <y>24</y>
+        <width>104</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>rf_frequency</name>
+        <pv_name>rf:signalgenerator:freq:set</pv_name>
+        <x>198</x>
+        <y>24</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <precision>2</precision>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter RF pulse frequency</tooltip>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>rf_amplitude</name>
+        <pv_name>rf:signalgenerator:amp:set</pv_name>
+        <x>198</x>
+        <y>94</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <format>1</format>
+        <precision>2</precision>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter RF pulse amplitude</tooltip>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_rf_amplitude</name>
+        <text>Amplitude</text>
+        <x>32</x>
+        <y>94</y>
+        <width>105</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>pulse_width</name>
+        <pv_name>rf:delaygenerator:t3:width:set</pv_name>
+        <x>198</x>
+        <y>174</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter RF pulse width</tooltip>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>rep_rate</name>
+        <pv_name>rf:delaygenerator:freq:f1:set</pv_name>
+        <x>198</x>
+        <y>236</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <format>1</format>
+        <wrap_words>true</wrap_words>
+        <tooltip>Enter pulse rep rate</tooltip>
+      </widget>
+      <widget type="scrollbar" version="2.0.0">
+        <name>Scrollbar_2</name>
+        <pv_name>rf:signalgenerator:amp:set</pv_name>
+        <x>198</x>
+        <y>124</y>
+        <width>130</width>
+        <height>22</height>
+        <maximum>11.0</maximum>
+        <limits_from_pv>false</limits_from_pv>
+        <bar_length>3.5</bar_length>
+        <increment>0.1</increment>
+      </widget>
+      <widget type="scrollbar" version="2.0.0">
+        <name>Scrollbar_4</name>
+        <pv_name>rf:signalgenerator:freq:set</pv_name>
+        <x>198</x>
+        <y>54</y>
+        <width>130</width>
+        <minimum>2996.0</minimum>
+        <maximum>2999.0</maximum>
+        <limits_from_pv>false</limits_from_pv>
+        <bar_length>1.0</bar_length>
+        <increment>0.01</increment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Switch</name>
+      <width>404</width>
+      <font>
+        <font family="Calibri" style="REGULAR" size="20.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="26" green="51" blue="153">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>label_rf_switch_power</name>
+        <text>Power</text>
+        <x>27</x>
+        <y>7</y>
+        <width>65</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>button_rf_swtich_1</name>
+        <pv_name>plc:rf:off</pv_name>
+        <bit>-1</bit>
+        <x>160</x>
+        <y>5</y>
+        <width>121</width>
+        <height>36</height>
+        <off_label>OFF</off_label>
+        <off_color>
+          <color name="Off" red="60" green="100" blue="60">
+          </color>
+        </off_color>
+        <on_label>OFF</on_label>
+        <on_color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </on_color>
+        <show_led>false</show_led>
+        <rules>
+          <rule name="Visibility" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0==0">
+              <value>false</value>
+            </exp>
+            <exp bool_exp="pv0==1">
+              <value>true</value>
+            </exp>
+            <pv_name>plc:rfmonitor</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>button_rf_swtich</name>
+        <pv_name>plc:rf:on</pv_name>
+        <bit>-1</bit>
+        <x>160</x>
+        <y>5</y>
+        <width>121</width>
+        <height>36</height>
+        <off_label>ON</off_label>
+        <off_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </off_color>
+        <on_label>ON</on_label>
+        <on_color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </on_color>
+        <show_led>false</show_led>
+        <rules>
+          <rule name="Visibility" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0==0">
+              <value>true</value>
+            </exp>
+            <exp bool_exp="pv0==1">
+              <value>false</value>
+            </exp>
+            <pv_name>plc:rfmonitor</pv_name>
+          </rule>
+        </rules>
+        <tooltip>Press to toggle RF switch</tooltip>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>LED_1</name>
+        <pv_name>plc:rfmonitor</pv_name>
+        <x>180</x>
+        <y>13</y>
+        <off_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </off_color>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>Boolean Button</name>
+        <pv_name>rf:switch:timerenabled</pv_name>
+        <x>95</x>
+        <y>72</y>
+        <width>113</width>
+        <height>36</height>
+        <off_label>ENABLE</off_label>
+        <off_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </off_color>
+        <on_label>DISABLE</on_label>
+        <tooltip>Press to enable/disable timer</tooltip>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_rf_switch_power_1</name>
+        <text>Timer</text>
+        <x>27</x>
+        <y>72</y>
+        <width>58</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry</name>
+        <pv_name>rf:switch:timedelay</pv_name>
+        <x>225</x>
+        <y>72</y>
+        <width>121</width>
+        <height>36</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <precision>0</precision>
+        <rules>
+          <rule name="Visibility" prop_id="enabled" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>true</value>
+            </exp>
+            <exp bool_exp="pv0==0 ">
+              <value>false</value>
+            </exp>
+            <pv_name>rf:switch:timerenabled</pv_name>
+          </rule>
+        </rules>
+        <tooltip>Enter time delay</tooltip>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Group</name>
+        <x>27</x>
+        <y>125</y>
+        <width>299</width>
+        <height>31</height>
+        <style>3</style>
+        <background_color>
+          <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+        <rules>
+          <rule name="Visibility" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0==1  &amp;&amp;  pv1==1">
+              <value>true</value>
+            </exp>
+            <exp bool_exp="pv0==0 || pv1==0">
+              <value>false</value>
+            </exp>
+            <pv_name>plc:rfmonitor</pv_name>
+            <pv_name>rf:switch:timerenabled</pv_name>
+          </rule>
+        </rules>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Entry_1</name>
+          <pv_name>rf:switch:timeremained</pv_name>
+          <x>178</x>
+          <width>121</width>
+          <height>25</height>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="20.0">
+            </font>
+          </font>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <precision>0</precision>
+          <wrap_words>false</wrap_words>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>label_rf_switch_power_2</name>
+          <text>Switching off in</text>
+          <x>31</x>
+          <width>131</width>
+          <height>28</height>
+          <font>
+            <font family="Calibri" style="REGULAR" size="20.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+          <wrap_words>false</wrap_words>
+        </widget>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Arc Detector</name>
+    <x>1360</x>
+    <y>387</y>
+    <width>294</width>
+    <height>98</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="51" green="77" blue="179">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="bool_button" version="2.0.0">
+      <name>arc_test</name>
+      <pv_name>plc:ledTest</pv_name>
+      <x>127</x>
+      <y>8</y>
+      <height>34</height>
+      <labels_from_pv>true</labels_from_pv>
+      <actions>
+      </actions>
+      <tooltip>Press to perform LED test (arc detection)</tooltip>
+      <show_confirm_dialog>false</show_confirm_dialog>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>label_chiller_power_1</name>
+      <text>LED</text>
+      <x>17</x>
+      <y>8</y>
+      <width>37</width>
+      <height>28</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="24.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Details</name>
+    <x>1660</x>
+    <y>90</y>
+    <width>224</width>
+    <height>460</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="51" green="77" blue="179">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>button_delay_gen_setup_1</name>
+      <actions>
+        <action type="open_display">
+          <file>D:/DevelopmentV2/display_builder/bob/osc_details.bob</file>
+          <target>replace</target>
+          <description>Oscilloscope_details</description>
+        </action>
+      </actions>
+      <text>Oscilloscope</text>
+      <x>33</x>
+      <y>35</y>
+      <width>130</width>
+      <height>80</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="20.0">
+        </font>
+      </font>
+      <tooltip>Press to view oscilloscope details</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>button_delay_gen_setup_2</name>
+      <actions>
+        <action type="open_display">
+          <file>D:/product-sns-win/product-sns-4.6.0/opi/bob/conditioning.bob</file>
+          <target>replace</target>
+          <description>Conditioning</description>
+        </action>
+      </actions>
+      <text>Conditioning</text>
+      <x>33</x>
+      <y>285</y>
+      <width>130</width>
+      <height>82</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="20.0">
+        </font>
+      </font>
+      <tooltip>Press to open conditioning interface screen</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>button_delay_gen_setup_4</name>
+      <actions>
+        <action type="open_display">
+          <file>D:/product-sns-win/product-sns-4.6.0/opi/bob/klystron_modulator.bob</file>
+          <target>replace</target>
+          <description>Klystron Modulator</description>
+        </action>
+      </actions>
+      <text>Klystron Modulator</text>
+      <x>33</x>
+      <y>150</y>
+      <width>130</width>
+      <height>82</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="20.0">
+        </font>
+      </font>
+      <tooltip>Press to view modulator details</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Klystron Modulator</name>
+    <x>590</x>
+    <y>90</y>
+    <width>320</width>
+    <height>578</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="20.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="26" green="51" blue="153">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>State</name>
+      <x>10</x>
+      <y>13</y>
+      <width>244</width>
+      <height>499</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="20.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="26" green="51" blue="153">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>rf:mod:stateTarget:set</pv_name>
+            <value>1</value>
+            <description>Off</description>
+          </action>
+        </actions>
+        <x>24</x>
+        <y>355</y>
+        <width>140</width>
+        <height>80</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="20.0">
+          </font>
+        </font>
+        <rules>
+          <rule name="Color" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==0">
+              <value>
+                <color name="On" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>rf:mod:targetState</pv_name>
+          </rule>
+        </rules>
+        <tooltip>Press to switch into 'Off' state</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_1</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>rf:mod:stateTarget:set</pv_name>
+            <value>5</value>
+            <description>Standby</description>
+          </action>
+        </actions>
+        <x>24</x>
+        <y>233</y>
+        <width>140</width>
+        <height>80</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="20.0">
+          </font>
+        </font>
+        <rules>
+          <rule name="Color" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>
+                <color name="On" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>rf:mod:targetState</pv_name>
+          </rule>
+        </rules>
+        <tooltip>Press to switch into 'Standby' state</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_2</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>rf:mod:stateTarget:set</pv_name>
+            <value>9</value>
+            <description>HV</description>
+          </action>
+        </actions>
+        <x>24</x>
+        <y>125</y>
+        <width>140</width>
+        <height>80</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="20.0">
+          </font>
+        </font>
+        <rules>
+          <rule name="Color" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==2">
+              <value>
+                <color name="On" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>rf:mod:targetState</pv_name>
+          </rule>
+        </rules>
+        <tooltip>Press to switch into 'HV' state</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_3</name>
+        <actions>
+          <action type="write_pv">
+            <pv_name>rf:mod:stateTarget:set</pv_name>
+            <value>13</value>
+            <description>Trigger</description>
+          </action>
+        </actions>
+        <x>24</x>
+        <y>13</y>
+        <width>140</width>
+        <height>80</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="20.0">
+          </font>
+        </font>
+        <rules>
+          <rule name="Color" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==3">
+              <value>
+                <color name="On" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>rf:mod:targetState</pv_name>
+          </rule>
+        </rules>
+        <tooltip>Press to switch into 'Trigger' state</tooltip>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Chiller</name>
+    <x>1360</x>
+    <y>263</y>
+    <width>294</width>
+    <height>98</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="26" green="51" blue="153">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>label_chiller_power</name>
+      <text>Power</text>
+      <x>17</x>
+      <y>14</y>
+      <width>65</width>
+      <height>28</height>
+      <font>
+        <font family="Calibri" style="BOLD" size="24.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>button_chiller</name>
+      <pv_name>plc:sw:chiller</pv_name>
+      <bit>-1</bit>
+      <x>127</x>
+      <y>9</y>
+      <height>34</height>
+      <off_color>
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <labels_from_pv>true</labels_from_pv>
+      <actions>
+      </actions>
+      <tooltip>Press to toggle chiller power</tooltip>
+    </widget>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <x>380</x>
+    <y>80</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Delay Generator</name>
+    <x>950</x>
+    <y>520</y>
+    <width>366</width>
+    <height>320</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="20.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="26" green="51" blue="153">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Trigger</name>
+      <y>9</y>
+      <width>319</width>
+      <height>100</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="20.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="26" green="51" blue="153">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="action_button" version="3.0.0">
+        <name>button_delay_gen_setup</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t1:set</pv_name>
+            <value>IN1</value>
+            <description>T1</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t2:set</pv_name>
+            <value>IN1</value>
+            <description>T2</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t3:set</pv_name>
+            <value>IN1</value>
+            <description>T3</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t4:set</pv_name>
+            <value>IN1</value>
+            <description>T4</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t0:set</pv_name>
+            <value>IN1</value>
+            <description>T0</description>
+          </action>
+        </actions>
+        <text>On</text>
+        <x>18</x>
+        <y>12</y>
+        <width>95</width>
+        <height>32</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="20.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>button_delay_gen_setup_3</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t1:set</pv_name>
+            <value>OFF</value>
+            <description>T1</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t2:set</pv_name>
+            <value>OFF</value>
+            <description>T2</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t3:set</pv_name>
+            <value>OFF</value>
+            <description>T3</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t4:set</pv_name>
+            <value>OFF</value>
+            <description>T4</description>
+          </action>
+          <action type="write_pv">
+            <pv_name>rf:delaygenerator:trig:t0:set</pv_name>
+            <value>OFF</value>
+            <description>T0</description>
+          </action>
+        </actions>
+        <text>Off</text>
+        <x>158</x>
+        <y>12</y>
+        <width>95</width>
+        <height>32</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="20.0">
+          </font>
+        </font>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Delay</name>
+      <y>122</y>
+      <width>319</width>
+      <height>152</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="20.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="26" green="51" blue="153">
+        </color>
+      </foreground_color>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>label_e-gun_vacuum_lower_1</name>
+        <text>RF Trig</text>
+        <y>19</y>
+        <width>68</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>e-gun_vacuum_lower_1</name>
+        <pv_name>rf:delaygenerator:t3:delay:set</pv_name>
+        <x>137</x>
+        <y>19</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <wrap_words>true</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>label_e-gun_vacuum_lower_2</name>
+        <text>e-Gun Trig</text>
+        <y>66</y>
+        <width>104</width>
+        <height>28</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>e-gun_vacuum_lower_2</name>
+        <pv_name>rf:delaygenerator:t4:delay:set</pv_name>
+        <x>137</x>
+        <y>66</y>
+        <width>130</width>
+        <height>30</height>
+        <font>
+          <font family="Calibri" style="BOLD" size="24.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <wrap_words>true</wrap_words>
+      </widget>
+    </widget>
+  </widget>
+</display>
